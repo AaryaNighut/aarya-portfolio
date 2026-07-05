@@ -167,64 +167,62 @@ export default function HeroSection() {
           }
         }
         @media (max-width: 1023px) {
+          .hero {
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+          }
           .hero-image {
-            left: auto;
-            right: 0;
-            top: 80px;
-            height: calc(55vh - 80px);
-            width: 80%;
+            position: absolute;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            bottom: 30px;
+            top: auto;
+            height: 320px;
+            width: 90%;
+            max-width: 420px;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            opacity: 0.22;
+            justify-content: center;
+            opacity: 1;
             border: none !important;
             border-radius: 0 !important;
             box-shadow: none !important;
+            z-index: 10;
           }
           .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: 45% top;
+            object-position: center 25%;
             mix-blend-mode: screen;
-            mask-image: none;
-            -webkit-mask-image: none;
+            mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+            mask-composite: intersect;
+            -webkit-mask-composite: source-in;
             border: none !important;
             border-radius: 0 !important;
             box-shadow: none !important;
           }
           .hero-blend-overlay {
-            display: block;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 80px;
-            bottom: 0;
-            z-index: 2;
-            pointer-events: none;
-            background: linear-gradient(
-              to bottom,
-              rgba(5, 8, 22, 0.4) 0%,
-              rgba(5, 8, 22, 0.95) 80%,
-              #050816 100%
-            ), linear-gradient(
-              to right,
-              #050816 40%,
-              rgba(5, 8, 22, 0.1) 100%
-            );
+            display: none;
           }
           .hero-container {
-            padding: 0 24px;
-            align-items: center;
-            justify-content: flex-start;
+            padding: 100px 24px 380px 24px;
+            min-height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
           }
           .hero-content {
             width: 100%;
             align-items: flex-start;
             text-align: left;
             gap: 0;
-            padding-top: 5rem;
-            padding-bottom: 2.5rem;
+            padding-top: 0;
+            padding-bottom: 0;
           }
         }
       `}</style>
@@ -385,9 +383,9 @@ export default function HeroSection() {
           </div>
 
           {/* Achievements | Projects | Certificates | CGPA Cards */}
-          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
+          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-2 md:grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
             {stats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center gap-1 border-r last:border-r-0 border-white/[0.04] last:pr-0 pr-2">
+              <div key={idx} className="flex flex-col items-center text-center gap-1 border-white/[0.04] md:border-r md:last:border-r-0 last:pr-0 pr-2 md:pr-2">
                 <div className="flex items-center justify-center gap-1.5">
                   <stat.icon className="w-4 h-4 text-yellow-400" />
                   <span className="text-base md:text-lg font-black text-white tracking-tight">
