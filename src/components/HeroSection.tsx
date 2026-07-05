@@ -274,14 +274,14 @@ export default function HeroSection() {
           </div>
 
           {/* AARYA NIGHUT */}
-          <div className="flex flex-col items-start w-full mb-[10px]">
-            <h1 className="text-3xl sm:text-5xl lg:text-6.5xl xl:text-7xl font-black tracking-tight text-white leading-none uppercase select-none whitespace-nowrap">
+          <div className="flex flex-col items-center lg:items-start w-full mb-[10px]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6.5xl xl:text-7xl font-black tracking-tight text-white leading-none uppercase select-none sm:whitespace-nowrap">
               Aarya <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(250,204,21,0.25)]">Nighut</span>
             </h1>
           </div>
 
           {/* AI & FULL STACK DEVELOPER */}
-          <div className="flex flex-col items-start w-full mb-[18px]">
+          <div className="flex flex-col items-center lg:items-start w-full mb-[18px]">
             <h2 className="text-xs md:text-sm font-extrabold text-slate-400 uppercase tracking-widest flex items-center gap-2 select-none">
               <span className="w-1.5 h-3 bg-yellow-400/80 rounded-full" />
               AI & FULL STACK DEVELOPER
@@ -289,7 +289,7 @@ export default function HeroSection() {
           </div>
 
           {/* 🟢 OPEN TO OPPORTUNITIES */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/20 backdrop-blur-md w-fit select-none mb-[20px]">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/20 backdrop-blur-md w-fit select-none mb-[20px] mx-auto lg:mx-0">
             <span className="w-2.5 h-2.5 rounded-full bg-[#10b981] shadow-[0_0_8px_#10b981] animate-pulse" />
             <span className="text-[15px] font-semibold text-[#10b981] tracking-wide">
               OPEN TO OPPORTUNITIES
@@ -297,9 +297,9 @@ export default function HeroSection() {
           </div>
 
           {/* Professional Introduction Paragraph */}
-          <p className="max-w-2xl text-slate-400 text-xs md:text-sm leading-[1.8] font-normal w-full text-left mb-[38px]">
+          <p className="max-w-2xl text-slate-400 text-xs md:text-sm leading-[1.8] font-normal w-full text-center lg:text-left mb-[38px]">
             As a passionate AI & Full-Stack Developer, I specialize in engineering intelligent systems
-            and responsive web applications. Currently a 3rd-year Undergraduate in CSE (AI & ML) at
+            and responsive web applications. Currently a 4th-year Undergraduate in CSE (AI & ML) at
             Lokmanya Tilak College of Engineering, Navi Mumbai, maintaining a strong 9+ CGPA. I combine Data Structures
             and Algorithms in Java with MERN stack development to build functional, user-centric web applications.
             With hands-on experience in full-stack project workflows and a fundamental understanding of cloud environments
@@ -307,7 +307,7 @@ export default function HeroSection() {
           </p>
 
           {/* Core Technologies Row */}
-          <div className="flex flex-nowrap justify-start items-center gap-[14px] w-full md:w-max select-none overflow-x-auto scrollbar-none pt-3 pb-2 mb-[16px]">
+          <div className="flex flex-nowrap justify-center lg:justify-start items-center gap-[14px] w-full select-none overflow-x-auto scrollbar-none pt-3 pb-2 mb-[16px]">
             {[
               { name: "Java", Icon: FaJava, color: "text-[#E76F00]", hoverGlow: "hover:border-[#E76F00]/40 hover:shadow-[0_0_20px_rgba(231,111,0,0.18)]" },
               { name: "Python", Icon: FaPython, color: "text-[#387EB8]", hoverGlow: "hover:border-[#387EB8]/40 hover:shadow-[0_0_20px_rgba(56,126,184,0.18)]" },
@@ -331,7 +331,7 @@ export default function HeroSection() {
           </div>
 
           {/* Download Resume | View Projects | Contact Me */}
-          <div className="flex flex-wrap items-center justify-start gap-4 w-full mb-[22px]">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full mb-[22px]">
             <a
               href="/Aarya_Nighut_Resume.pdf"
               download="Aarya_Nighut_Resume.pdf"
@@ -358,9 +358,9 @@ export default function HeroSection() {
           </div>
 
           {/* Achievements | Projects | Certificates | CGPA Cards */}
-          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
+          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-2 sm:grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
             {stats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center gap-1 border-r last:border-r-0 border-white/[0.04] last:pr-0 pr-2">
+              <div key={idx} className="flex flex-col items-center text-center gap-1 sm:border-r sm:last:border-r-0 border-white/[0.04] sm:last:pr-0 sm:pr-2">
                 <div className="flex items-center justify-center gap-1.5">
                   <stat.icon className="w-4 h-4 text-yellow-400" />
                   <span className="text-base md:text-lg font-black text-white tracking-tight">
