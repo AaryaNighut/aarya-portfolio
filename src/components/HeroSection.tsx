@@ -106,12 +106,18 @@ export default function HeroSection() {
           height: 100%;
           object-fit: contain;
           object-position: center bottom;
-          mask-image: linear-gradient(to left, black 75%, transparent 100%),
-                      linear-gradient(to top, black 70%, transparent 100%);
-          -webkit-mask-image: linear-gradient(to left, black 75%, transparent 100%),
-                              linear-gradient(to top, black 70%, transparent 100%);
-          mask-composite: intersect;
-          -webkit-mask-composite: destination-in;
+          mask-image: linear-gradient(
+            to left,
+            black 82%,
+            rgba(0,0,0,.95) 90%,
+            transparent 100%
+          );
+          -webkit-mask-image: linear-gradient(
+            to left,
+            black 82%,
+            rgba(0,0,0,.95) 90%,
+            transparent 100%
+          );
           border: none !important;
           border-radius: 0 !important;
           box-shadow: none !important;
@@ -124,15 +130,13 @@ export default function HeroSection() {
           margin: 0 auto;
           padding: 0 60px;
           position: relative;
-          z-index: 10;
+          z-index: 3;
           display: flex;
           align-items: center;
           min-height: 100vh;
           width: 100%;
         }
         .hero-content {
-          position: relative;
-          z-index: 10;
           width: 48%;
           display: flex;
           flex-direction: column;
@@ -247,9 +251,6 @@ export default function HeroSection() {
           src="/images/aarya_portrait_clean.png"
           alt="Aarya Nighut Portrait"
         />
-        {/* Soft background blending overlay gradients */}
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-[#050816] via-[#050816]/40 to-transparent w-[50%] h-full left-0 top-0 z-[2]" />
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#050816] via-[#050816]/40 to-transparent w-full h-[40%] left-0 bottom-0 z-[2]" />
       </motion.div>
 
       {/* Gradient Blend Overlay (z-index 2) */}
@@ -306,7 +307,7 @@ export default function HeroSection() {
           </p>
 
           {/* Core Technologies Row */}
-          <div className="relative z-[12] flex flex-nowrap justify-center lg:justify-start items-center gap-[14px] w-full select-none overflow-x-auto scrollbar-none pt-3 pb-2 mb-[16px]">
+          <div className="flex flex-nowrap justify-center lg:justify-start items-center gap-[14px] w-full select-none overflow-x-auto scrollbar-none pt-3 pb-2 mb-[16px]">
             {[
               { name: "Java", Icon: FaJava, color: "text-[#E76F00]", hoverGlow: "hover:border-[#E76F00]/40 hover:shadow-[0_0_20px_rgba(231,111,0,0.18)]" },
               { name: "Python", Icon: FaPython, color: "text-[#387EB8]", hoverGlow: "hover:border-[#387EB8]/40 hover:shadow-[0_0_20px_rgba(56,126,184,0.18)]" },
@@ -330,7 +331,7 @@ export default function HeroSection() {
           </div>
 
           {/* Download Resume | View Projects | Contact Me */}
-          <div className="relative z-[12] flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full mb-[22px]">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full mb-[22px]">
             <a
               href="/Aarya_Nighut_Resume.pdf"
               download="Aarya_Nighut_Resume.pdf"
@@ -357,7 +358,7 @@ export default function HeroSection() {
           </div>
 
           {/* Achievements | Projects | Certificates | CGPA Cards */}
-          <div className="relative z-[12] max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-2 sm:grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
+          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-2 sm:grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center text-center gap-1 sm:border-r sm:last:border-r-0 border-white/[0.04] sm:last:pr-0 sm:pr-2">
                 <div className="flex items-center justify-center gap-1.5">
