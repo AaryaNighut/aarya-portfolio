@@ -28,7 +28,7 @@ const dots = [
 
 export default function TechStackFloat() {
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden z-[2] select-none">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-[4] select-none">
       {/* Premium subtle grid overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:45px_45px] pointer-events-none" />
 

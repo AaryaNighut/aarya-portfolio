@@ -97,7 +97,7 @@ export default function HeroSection() {
           align-items: flex-end;
           justify-content: center;
           overflow: hidden;
-          z-index: 1;
+          z-index: 2;
           pointer-events: none;
           user-select: none;
         }
@@ -106,16 +106,18 @@ export default function HeroSection() {
           height: 100%;
           object-fit: contain;
           object-position: center bottom;
-          mask-image: linear-gradient(
-            to left,
-            black 82%,
-            rgba(0,0,0,.95) 90%,
+          mask-image: radial-gradient(
+            ellipse at 60% 45%,
+            black 35%,
+            rgba(0,0,0,0.85) 68%,
+            rgba(0,0,0,0.2) 90%,
             transparent 100%
           );
-          -webkit-mask-image: linear-gradient(
-            to left,
-            black 82%,
-            rgba(0,0,0,.95) 90%,
+          -webkit-mask-image: radial-gradient(
+            ellipse at 60% 45%,
+            black 35%,
+            rgba(0,0,0,0.85) 68%,
+            rgba(0,0,0,0.2) 90%,
             transparent 100%
           );
           border: none !important;
@@ -123,14 +125,27 @@ export default function HeroSection() {
           box-shadow: none !important;
         }
         .hero-blend-overlay {
-          display: none;
+          position: absolute;
+          left: 48%;
+          right: 8%;
+          top: 80px;
+          height: 82%;
+          pointer-events: none;
+          z-index: 3;
+          background: linear-gradient(
+            to right,
+            #050816 0%,
+            rgba(5, 8, 22, 0.85) 18%,
+            rgba(5, 8, 22, 0.3) 35%,
+            rgba(5, 8, 22, 0) 50%
+          );
         }
         .hero-container {
           max-width: 1500px;
           margin: 0 auto;
           padding: 0 60px;
           position: relative;
-          z-index: 3;
+          z-index: 10;
           display: flex;
           align-items: center;
           min-height: 100vh;
@@ -179,7 +194,7 @@ export default function HeroSection() {
             right: 0;
             top: 80px;
             bottom: 0;
-            z-index: 2;
+            z-index: 3;
             pointer-events: none;
             background: linear-gradient(
               to bottom,
@@ -253,10 +268,33 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      {/* Gradient Blend Overlay (z-index 2) */}
+      {/* Gradient Blend Overlay (z-index 3) */}
       <div className="hero-blend-overlay" />
 
-      {/* Responsive layout container (z-index 3) */}
+      {/* Floating AI / ML UI Badge (z-index 15) */}
+      <motion.div 
+        className="absolute hidden lg:flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-yellow-500/20 bg-[#0C1220]/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5),0_0_15px_rgba(250,204,21,0.1)] z-[15] pointer-events-none"
+        style={{
+          right: "34%",
+          top: "40%",
+        }}
+        animate={{
+          y: [0, -10, 0]
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
+        <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
+        <Brain className="w-4 h-4 text-yellow-400" />
+        <span className="text-[10px] font-mono font-extrabold tracking-widest text-slate-200">
+          SYSTEM: AI & ML
+        </span>
+      </motion.div>
+
+      {/* Responsive layout container (z-index 10) */}
       <div className="hero-container">
         
         {/* LEFT COLUMN: Profile Info (46% max width on desktop to prevent overlaps) */}
