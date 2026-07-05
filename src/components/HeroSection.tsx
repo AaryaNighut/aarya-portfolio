@@ -97,7 +97,7 @@ export default function HeroSection() {
           align-items: flex-end;
           justify-content: center;
           overflow: hidden;
-          z-index: 2;
+          z-index: 1;
           pointer-events: none;
           user-select: none;
         }
@@ -106,18 +106,16 @@ export default function HeroSection() {
           height: 100%;
           object-fit: contain;
           object-position: center bottom;
-          mask-image: radial-gradient(
-            ellipse at 60% 45%,
-            black 35%,
-            rgba(0,0,0,0.85) 68%,
-            rgba(0,0,0,0.2) 90%,
+          mask-image: linear-gradient(
+            to left,
+            black 82%,
+            rgba(0,0,0,.95) 90%,
             transparent 100%
           );
-          -webkit-mask-image: radial-gradient(
-            ellipse at 60% 45%,
-            black 35%,
-            rgba(0,0,0,0.85) 68%,
-            rgba(0,0,0,0.2) 90%,
+          -webkit-mask-image: linear-gradient(
+            to left,
+            black 82%,
+            rgba(0,0,0,.95) 90%,
             transparent 100%
           );
           border: none !important;
@@ -125,27 +123,14 @@ export default function HeroSection() {
           box-shadow: none !important;
         }
         .hero-blend-overlay {
-          position: absolute;
-          left: 48%;
-          right: 8%;
-          top: 80px;
-          height: 82%;
-          pointer-events: none;
-          z-index: 3;
-          background: linear-gradient(
-            to right,
-            #050816 0%,
-            rgba(5, 8, 22, 0.85) 18%,
-            rgba(5, 8, 22, 0.3) 35%,
-            rgba(5, 8, 22, 0) 50%
-          );
+          display: none;
         }
         .hero-container {
           max-width: 1500px;
           margin: 0 auto;
           padding: 0 60px;
           position: relative;
-          z-index: 10;
+          z-index: 3;
           display: flex;
           align-items: center;
           min-height: 100vh;
@@ -194,7 +179,7 @@ export default function HeroSection() {
             right: 0;
             top: 80px;
             bottom: 0;
-            z-index: 3;
+            z-index: 2;
             pointer-events: none;
             background: linear-gradient(
               to bottom,
@@ -268,33 +253,10 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      {/* Gradient Blend Overlay (z-index 3) */}
+      {/* Gradient Blend Overlay (z-index 2) */}
       <div className="hero-blend-overlay" />
 
-      {/* Floating AI / ML UI Badge (z-index 15) */}
-      <motion.div 
-        className="absolute hidden lg:flex items-center gap-2.5 px-4 py-2.5 rounded-xl border border-yellow-500/20 bg-[#0C1220]/90 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.5),0_0_15px_rgba(250,204,21,0.1)] z-[15] pointer-events-none"
-        style={{
-          right: "34%",
-          top: "40%",
-        }}
-        animate={{
-          y: [0, -10, 0]
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <div className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
-        <Brain className="w-4 h-4 text-yellow-400" />
-        <span className="text-[10px] font-mono font-extrabold tracking-widest text-slate-200">
-          SYSTEM: AI & ML
-        </span>
-      </motion.div>
-
-      {/* Responsive layout container (z-index 10) */}
+      {/* Responsive layout container (z-index 3) */}
       <div className="hero-container">
         
         {/* LEFT COLUMN: Profile Info (46% max width on desktop to prevent overlaps) */}
@@ -312,14 +274,14 @@ export default function HeroSection() {
           </div>
 
           {/* AARYA NIGHUT */}
-          <div className="flex flex-col items-center lg:items-start w-full mb-[10px]">
-            <h1 className="text-3xl sm:text-5xl lg:text-6.5xl xl:text-7xl font-black tracking-tight text-white leading-none uppercase select-none sm:whitespace-nowrap">
+          <div className="flex flex-col items-start w-full mb-[10px]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6.5xl xl:text-7xl font-black tracking-tight text-white leading-none uppercase select-none whitespace-nowrap">
               Aarya <span className="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_0_35px_rgba(250,204,21,0.25)]">Nighut</span>
             </h1>
           </div>
 
           {/* AI & FULL STACK DEVELOPER */}
-          <div className="flex flex-col items-center lg:items-start w-full mb-[18px]">
+          <div className="flex flex-col items-start w-full mb-[18px]">
             <h2 className="text-xs md:text-sm font-extrabold text-slate-400 uppercase tracking-widest flex items-center gap-2 select-none">
               <span className="w-1.5 h-3 bg-yellow-400/80 rounded-full" />
               AI & FULL STACK DEVELOPER
@@ -327,7 +289,7 @@ export default function HeroSection() {
           </div>
 
           {/* 🟢 OPEN TO OPPORTUNITIES */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/20 backdrop-blur-md w-fit select-none mb-[20px] mx-auto lg:mx-0">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/20 backdrop-blur-md w-fit select-none mb-[20px]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#10b981] shadow-[0_0_8px_#10b981] animate-pulse" />
             <span className="text-[15px] font-semibold text-[#10b981] tracking-wide">
               OPEN TO OPPORTUNITIES
@@ -335,9 +297,9 @@ export default function HeroSection() {
           </div>
 
           {/* Professional Introduction Paragraph */}
-          <p className="max-w-2xl text-slate-400 text-xs md:text-sm leading-[1.8] font-normal w-full text-center lg:text-left mb-[38px]">
+          <p className="max-w-2xl text-slate-400 text-xs md:text-sm leading-[1.8] font-normal w-full text-left mb-[38px]">
             As a passionate AI & Full-Stack Developer, I specialize in engineering intelligent systems
-            and responsive web applications. Currently a 4th-year Undergraduate in CSE (AI & ML) at
+            and responsive web applications. Currently a 3rd-year Undergraduate in CSE (AI & ML) at
             Lokmanya Tilak College of Engineering, Navi Mumbai, maintaining a strong 9+ CGPA. I combine Data Structures
             and Algorithms in Java with MERN stack development to build functional, user-centric web applications.
             With hands-on experience in full-stack project workflows and a fundamental understanding of cloud environments
@@ -345,7 +307,7 @@ export default function HeroSection() {
           </p>
 
           {/* Core Technologies Row */}
-          <div className="flex flex-nowrap justify-center lg:justify-start items-center gap-[14px] w-full select-none overflow-x-auto scrollbar-none pt-3 pb-2 mb-[16px]">
+          <div className="flex flex-nowrap justify-start items-center gap-[14px] w-full md:w-max select-none overflow-x-auto scrollbar-none pt-3 pb-2 mb-[16px]">
             {[
               { name: "Java", Icon: FaJava, color: "text-[#E76F00]", hoverGlow: "hover:border-[#E76F00]/40 hover:shadow-[0_0_20px_rgba(231,111,0,0.18)]" },
               { name: "Python", Icon: FaPython, color: "text-[#387EB8]", hoverGlow: "hover:border-[#387EB8]/40 hover:shadow-[0_0_20px_rgba(56,126,184,0.18)]" },
@@ -369,7 +331,7 @@ export default function HeroSection() {
           </div>
 
           {/* Download Resume | View Projects | Contact Me */}
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 w-full mb-[22px]">
+          <div className="flex flex-wrap items-center justify-start gap-4 w-full mb-[22px]">
             <a
               href="/Aarya_Nighut_Resume.pdf"
               download="Aarya_Nighut_Resume.pdf"
@@ -396,9 +358,9 @@ export default function HeroSection() {
           </div>
 
           {/* Achievements | Projects | Certificates | CGPA Cards */}
-          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-2 sm:grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
+          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
             {stats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col items-center text-center gap-1 sm:border-r sm:last:border-r-0 border-white/[0.04] sm:last:pr-0 sm:pr-2">
+              <div key={idx} className="flex flex-col items-center text-center gap-1 border-r last:border-r-0 border-white/[0.04] last:pr-0 pr-2">
                 <div className="flex items-center justify-center gap-1.5">
                   <stat.icon className="w-4 h-4 text-yellow-400" />
                   <span className="text-base md:text-lg font-black text-white tracking-tight">
