@@ -147,51 +147,49 @@ export default function HeroSection() {
           padding-bottom: 2.5rem;
         }
         @media (max-width: 1023px) {
-          .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: auto;
-            padding-top: 100px;
-            background-color: transparent;
-          }
           .hero-image {
-            position: relative;
-            left: auto;
-            right: auto;
-            top: auto;
-            width: 220px;
-            height: 220px;
-            margin: 0 auto 20px auto;
+            left: 0;
+            right: 0;
+            top: 80px;
+            height: calc(55vh - 80px);
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            opacity: 1;
-            z-index: 5;
-            pointer-events: auto;
+            opacity: 0.20;
             border: none !important;
             border-radius: 0 !important;
             box-shadow: none !important;
-            overflow: visible;
           }
           .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            object-position: center center;
-            opacity: 1 !important;
-            mask-image: none !important;
-            -webkit-mask-image: none !important;
+            object-position: center top;
+            mask-image: none;
+            -webkit-mask-image: none;
             border: none !important;
             border-radius: 0 !important;
             box-shadow: none !important;
           }
           .hero-blend-overlay {
-            display: none;
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 80px;
+            bottom: 0;
+            z-index: 2;
+            pointer-events: none;
+            background: linear-gradient(
+              to bottom,
+              rgba(5, 8, 22, 0.4) 0%,
+              rgba(5, 8, 22, 0.85) 60%,
+              #050816 100%
+            );
           }
           .hero-container {
-            padding: 0 24px;
-            min-height: auto;
+            padding: 0 30px;
             align-items: center;
             justify-content: center;
           }
@@ -200,8 +198,8 @@ export default function HeroSection() {
             align-items: center;
             text-align: center;
             gap: 0;
-            padding-top: 0;
-            padding-bottom: 40px;
+            padding-top: 6rem;
+            padding-bottom: 2.5rem;
           }
         }
       `}</style>
