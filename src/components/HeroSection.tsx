@@ -167,38 +167,46 @@ export default function HeroSection() {
           }
         }
         @media (max-width: 1023px) {
-          .hero {
+          .hero-container {
+            padding: 80px 16px 20px 16px;
             min-height: auto;
+            position: relative;
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+          }
+          .hero-content {
+            width: 58%;
+            align-items: flex-start;
+            text-align: left;
+            gap: 0;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
           }
           .hero-image {
             position: absolute;
-            left: 50%;
-            right: auto;
-            transform: translateX(-50%);
-            bottom: 30px;
-            top: auto;
-            height: 320px;
-            width: 90%;
-            max-width: 420px;
+            right: 0px;
+            top: 80px;
+            bottom: 40px;
+            width: 40%;
+            min-height: auto;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
-            opacity: 1;
-            border: none !important;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-            z-index: 10;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
           }
           .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 25%;
+            object-position: center top;
             mix-blend-mode: screen;
-            mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
             mask-composite: intersect;
             -webkit-mask-composite: source-in;
             border: none !important;
@@ -207,22 +215,6 @@ export default function HeroSection() {
           }
           .hero-blend-overlay {
             display: none;
-          }
-          .hero-container {
-            padding: 100px 24px 380px 24px;
-            min-height: auto;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-          }
-          .hero-content {
-            width: 100%;
-            align-items: flex-start;
-            text-align: left;
-            gap: 0;
-            padding-top: 0;
-            padding-bottom: 0;
           }
         }
       `}</style>
@@ -265,18 +257,7 @@ export default function HeroSection() {
         />
       ))}
 
-      {/* Absolutely Positioned Portrait Layer (z-index 1) */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-        className="hero-image"
-      >
-        <img
-          src="/images/aarya_home_portrait.jpg"
-          alt="Aarya Nighut Portrait"
-        />
-      </motion.div>
+
 
       {/* Gradient Blend Overlay (z-index 2) */}
       <div className="hero-blend-overlay" />
@@ -401,6 +382,19 @@ export default function HeroSection() {
           </div>
 
 
+        </motion.div>
+
+        {/* Portrait Layer (z-index 1) */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="hero-image"
+        >
+          <img
+            src="/images/aarya_home_portrait.jpg"
+            alt="Aarya Nighut Portrait"
+          />
         </motion.div>
       </div>
     </section>
