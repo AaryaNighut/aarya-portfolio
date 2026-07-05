@@ -45,7 +45,7 @@ function CountUp({ end, duration = 1.5, decimals = 0 }: { end: number; duration?
 const fullCode = `const aarya = {
   name: "Aarya Subhash Nighut",
   role: "AI & Full Stack Developer",
-  degree: "B.E. Computer Science Engineering (AI & ML)",
+  degree: "B.E. Computer Science and Engineering (AI & ML)",
   college: "Lokmanya Tilak College of Engineering",
   year: "Fourth Year Undergraduate",
   cgpa: "9+ CGPA",
@@ -256,7 +256,7 @@ export default function AboutSection() {
             <p className="text-slate-300 text-xs md:text-sm leading-[1.8] font-normal max-w-2xl">
               I am Aarya Subhash Nighut, an AI & Full Stack Developer passionate about building intelligent and
               scalable web applications. I enjoy solving real-world problems using Artificial Intelligence and
-              the MERN Stack. Currently pursuing my 4th-year B.E. in Computer Science Engineering (AI & ML) at
+              the MERN Stack. Currently pursuing my 4th-year B.E. in Computer Science and Engineering (AI & ML) at
               Lokmanya Tilak College of Engineering with a 9+ CGPA, I focus on combining algorithms with modern frameworks to create secure, user-centric products.
             </p>
  
@@ -271,8 +271,8 @@ export default function AboutSection() {
               </a>
             </div>
  
-            {/* Statistics Cards (Compact horizontal row below bio) */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mt-6 select-none">
+            {/* Statistics Cards (2x2 grid layout: 2 above, 2 below) */}
+            <div className="grid grid-cols-2 gap-3 w-full max-w-md mt-6 select-none">
               {stats.map((stat, idx) => {
                 const Icon = stat.icon;
                 return (

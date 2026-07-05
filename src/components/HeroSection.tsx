@@ -91,10 +91,11 @@ export default function HeroSection() {
           position: absolute;
           right: 8%;
           top: 80px;
+          bottom: 40px;
           width: 44%;
-          height: 82%;
+          min-height: 520px;
           display: flex;
-          align-items: flex-end;
+          align-items: flex-start;
           justify-content: center;
           overflow: hidden;
           z-index: 1;
@@ -104,20 +105,13 @@ export default function HeroSection() {
         .hero-image img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
-          object-position: center bottom;
-          mask-image: linear-gradient(
-            to left,
-            black 82%,
-            rgba(0,0,0,.95) 90%,
-            transparent 100%
-          );
-          -webkit-mask-image: linear-gradient(
-            to left,
-            black 82%,
-            rgba(0,0,0,.95) 90%,
-            transparent 100%
-          );
+          object-fit: cover;
+          object-position: center top;
+          mix-blend-mode: screen;
+          mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+          mask-composite: intersect;
+          -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+          -webkit-mask-composite: source-in;
           border: none !important;
           border-radius: 0 !important;
           box-shadow: none !important;
@@ -146,17 +140,43 @@ export default function HeroSection() {
           padding-top: 6rem;
           padding-bottom: 2.5rem;
         }
+        @media (min-width: 1024px) and (max-width: 1440px) {
+          .hero-image {
+            right: 4%;
+            width: 40%;
+            top: 80px;
+            bottom: 40px;
+            height: auto;
+            min-height: 520px;
+          }
+          .hero-content {
+            width: 52%;
+          }
+        }
+        @media (min-width: 1024px) and (max-width: 1200px) {
+          .hero-image {
+            right: 2%;
+            width: 36%;
+            top: 80px;
+            bottom: 40px;
+            height: auto;
+            min-height: 520px;
+          }
+          .hero-content {
+            width: 58%;
+          }
+        }
         @media (max-width: 1023px) {
           .hero-image {
-            left: 0;
+            left: auto;
             right: 0;
             top: 80px;
             height: calc(55vh - 80px);
-            width: 100%;
+            width: 80%;
             display: flex;
             align-items: center;
-            justify-content: center;
-            opacity: 0.20;
+            justify-content: flex-end;
+            opacity: 0.22;
             border: none !important;
             border-radius: 0 !important;
             box-shadow: none !important;
@@ -164,8 +184,9 @@ export default function HeroSection() {
           .hero-image img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            object-position: center top;
+            object-fit: cover;
+            object-position: 45% top;
+            mix-blend-mode: screen;
             mask-image: none;
             -webkit-mask-image: none;
             border: none !important;
@@ -184,21 +205,25 @@ export default function HeroSection() {
             background: linear-gradient(
               to bottom,
               rgba(5, 8, 22, 0.4) 0%,
-              rgba(5, 8, 22, 0.85) 60%,
+              rgba(5, 8, 22, 0.95) 80%,
               #050816 100%
+            ), linear-gradient(
+              to right,
+              #050816 40%,
+              rgba(5, 8, 22, 0.1) 100%
             );
           }
           .hero-container {
-            padding: 0 30px;
+            padding: 0 24px;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
           }
           .hero-content {
             width: 100%;
-            align-items: center;
-            text-align: center;
+            align-items: flex-start;
+            text-align: left;
             gap: 0;
-            padding-top: 6rem;
+            padding-top: 5rem;
             padding-bottom: 2.5rem;
           }
         }
@@ -250,7 +275,7 @@ export default function HeroSection() {
         className="hero-image"
       >
         <img
-          src="/images/aarya_portrait_clean.png"
+          src="/images/aarya_home_portrait.jpg"
           alt="Aarya Nighut Portrait"
         />
       </motion.div>
@@ -301,7 +326,7 @@ export default function HeroSection() {
           {/* Professional Introduction Paragraph */}
           <p className="max-w-2xl text-slate-400 text-xs md:text-sm leading-[1.8] font-normal w-full text-left mb-[38px]">
             As a passionate AI & Full-Stack Developer, I specialize in engineering intelligent systems
-            and responsive web applications. Currently a 4th-year Undergraduate in CSE (AI & ML) at
+            and responsive web applications. Currently a 4th-year Undergraduate in Computer Science and Engineering (AI & ML) at
             Lokmanya Tilak College of Engineering, Navi Mumbai, maintaining a strong 9+ CGPA. I combine Data Structures
             and Algorithms in Java with MERN stack development to build functional, user-centric web applications.
             With hands-on experience in full-stack project workflows and a fundamental understanding of cloud environments
@@ -353,7 +378,7 @@ export default function HeroSection() {
 
             <button
               onClick={() => scrollToSection("#contact")}
-              className="h-12 px-5 text-slate-400 hover:text-yellow-400 font-bold uppercase tracking-wider text-xs transition-colors duration-300 flex items-center justify-center cursor-pointer select-none hover:-translate-y-0.5"
+              className="h-12 px-6 rounded-xl border border-white/[0.08] hover:border-yellow-500/40 bg-white/[0.01] hover:bg-yellow-500/[0.04] text-slate-400 hover:text-yellow-400 font-bold uppercase tracking-wider text-xs transition-all duration-300 flex items-center justify-center cursor-pointer select-none hover:-translate-y-1"
             >
               Contact Me
             </button>
