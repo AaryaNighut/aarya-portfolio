@@ -103,7 +103,7 @@ export default function ServicesSection() {
                   
                   {/* LEFT SIDE: Service Number (80px wide on desktop) */}
                   <div 
-                    className="text-[40px] font-bold leading-none text-[rgba(250,204,21,0.25)] opacity-[0.22] group-hover:text-[#FACC15] group-hover:opacity-100 transition-all duration-[300ms] ease-in-out select-none md:w-[80px] md:min-w-[80px] shrink-0 relative z-[60]"
+                    className="text-[40px] font-bold leading-none text-slate-600 group-hover:text-[#FACC15] group-hover:opacity-100 transition-all duration-[300ms] ease-in-out select-none md:w-[80px] md:min-w-[80px] shrink-0 relative z-[60]"
                   >
                     {service.id}
                   </div>
