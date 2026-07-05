@@ -205,7 +205,7 @@ function CodingTerminal() {
                 <span className="w-4 text-right select-none text-slate-600 text-[10px] pt-0.5 font-bold">
                   {idx + 1}
                 </span>
-                <span className="flex-1 overflow-x-auto whitespace-pre leading-relaxed select-text font-mono text-[11px] sm:text-xs">
+                <span className="flex-1 whitespace-pre-wrap break-words sm:whitespace-pre sm:overflow-x-auto leading-relaxed select-text font-mono text-[11px] sm:text-xs">
                   {renderTokens(line, isLastLine)}
                 </span>
               </div>
