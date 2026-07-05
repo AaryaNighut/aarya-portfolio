@@ -168,45 +168,51 @@ export default function HeroSection() {
         }
         @media (max-width: 1023px) {
           .hero-container {
-            padding: 80px 16px 20px 16px;
+            padding: 76px 20px 40px 20px;
             min-height: auto;
             position: relative;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             width: 100%;
+            gap: 20px;
           }
           .hero-content {
-            width: 58%;
+            width: 100%;
             align-items: flex-start;
             text-align: left;
             gap: 0;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
           }
           .hero-image {
-            position: absolute;
-            right: 0px;
-            top: 80px;
-            bottom: 40px;
-            width: 40%;
-            min-height: auto;
+            position: relative;
+            right: auto;
+            top: auto;
+            bottom: auto;
+            width: 100%;
+            max-width: 380px;
+            height: 300px;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
             overflow: hidden;
-            z-index: 1;
-            pointer-events: none;
-            user-select: none;
+            z-index: 10;
+            margin: 20px auto 0 auto;
+            opacity: 1;
+            border: none !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
           }
           .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top;
+            object-position: center 20%;
             mix-blend-mode: screen;
-            mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%), linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
             mask-composite: intersect;
             -webkit-mask-composite: source-in;
             border: none !important;

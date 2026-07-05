@@ -59,7 +59,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-[9999] w-full bg-[#07111F]/75 backdrop-blur-[18px] border-b border-white/[0.05] select-none h-20 flex items-center transition-all duration-300">
+      <header className="fixed top-0 left-0 right-0 z-[9999] w-full bg-[#07111F]/75 backdrop-blur-[18px] border-b border-white/[0.05] select-none h-14 lg:h-20 flex items-center transition-all duration-300">
         <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between">
           {/* Logo: Clean professional coding symbol */}
           <a
@@ -124,7 +124,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-x-0 top-20 z-[9998] mx-4 p-6 bg-[#07111F]/95 border border-white/[0.08] backdrop-blur-2xl rounded-2xl shadow-2xl lg:hidden flex flex-col gap-4 select-none"
+            className="fixed inset-x-0 top-14 lg:top-20 z-[9998] mx-4 p-6 bg-[#07111F]/95 border border-white/[0.08] backdrop-blur-2xl rounded-2xl shadow-2xl lg:hidden flex flex-col gap-4 select-none"
           >
             <div className="flex flex-col gap-1.5">
               {navItems.map((item) => {
