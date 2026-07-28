@@ -16,7 +16,6 @@ const navItems = [
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,7 +71,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation Items */}
           <div className="hidden lg:flex items-center gap-2">
-            {navItems.map((item, index) => {
+            {navItems.map((item) => {
               const id = item.href.replace("#", "");
               const isActive = activeSection === id;
 
@@ -80,30 +79,19 @@ export default function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
-                  onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl ${
+                  className={`group relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl ${
                     isActive
                       ? "text-yellow-400 bg-white/[0.02] border border-white/[0.08] shadow-[0_0_15px_rgba(255,212,0,0.03)]"
-                      : "text-slate-400 hover:text-yellow-300"
+                      : "text-slate-400 hover:text-yellow-400"
                   }`}
                 >
-                  <span className="relative z-10 flex items-center gap-1">
+                  <span className="relative z-10 flex flex-col items-center gap-1">
                     {item.label}
-                  </span>
-                  <AnimatePresence>
-                    {hoveredIndex === index && !isActive && (
-                      <motion.span
-                        layoutId="navHoverBg"
-                        className="absolute inset-0 bg-yellow-400/[0.04] border border-yellow-400/10 rounded-xl -z-10"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                      />
+                    {!isActive && (
+                      <span className="absolute -bottom-1.5 left-0 w-full h-[2px] bg-yellow-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center rounded-full" />
                     )}
-                  </AnimatePresence>
+                  </span>
                 </a>
               );
             })}
@@ -113,7 +101,7 @@ export default function Navbar() {
               href="/Aarya_Nighut_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2.5 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase text-yellow-400 border border-yellow-400/30 hover:border-yellow-400 bg-yellow-400/5 hover:bg-yellow-400/10 rounded-xl transition-all duration-300 flex items-center gap-1 ml-4"
+              className="px-4 py-2.5 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase text-yellow-400 border border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black hover:shadow-[0_0_20px_rgba(250,204,21,0.25)] rounded-xl transition-all duration-300 flex items-center gap-1 ml-4"
             >
               Resume
               <ArrowUpRight className="w-3.5 h-3.5" />

@@ -29,13 +29,9 @@ const dots = [
 export default function TechStackFloat() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 select-none">
-      {/* Premium subtle grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:45px_45px] pointer-events-none" />
-
-      {/* Blurred gradient background orbs (Very low opacity: 4%) */}
-      <div className="absolute top-[10%] left-[5%] w-[450px] h-[450px] rounded-full bg-yellow-500/[0.03] blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: "12s" }} />
-      <div className="absolute bottom-[15%] right-[8%] w-[500px] h-[500px] rounded-full bg-purple-500/[0.03] blur-[130px] pointer-events-none animate-pulse" style={{ animationDuration: "15s" }} />
-      <div className="absolute top-[40%] left-[50%] -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-blue-500/[0.02] blur-[110px] pointer-events-none animate-pulse" style={{ animationDuration: "18s" }} />
+      {/* Blurred gradient background orbs (Very low opacity) */}
+      <div className="absolute top-[10%] left-[5%] w-[450px] h-[450px] rounded-full bg-yellow-500/[0.015] blur-[120px] pointer-events-none animate-pulse" style={{ animationDuration: "12s" }} />
+      <div className="absolute bottom-[15%] right-[8%] w-[500px] h-[500px] rounded-full bg-purple-500/[0.015] blur-[130px] pointer-events-none animate-pulse" style={{ animationDuration: "15s" }} />
 
       {/* Floating coding symbols */}
       {symbols.map((item, index) => (

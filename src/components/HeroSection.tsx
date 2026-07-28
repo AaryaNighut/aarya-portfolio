@@ -225,19 +225,9 @@ export default function HeroSection() {
         }
       `}</style>
 
-      {/* Faint digital code-grid overlay */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-[0.035] z-[1]"
-        style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px)",
-          backgroundSize: "44px 44px",
-        }}
-      />
-
       {/* Ambient background decoration glow lights */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[550px] h-[550px] rounded-full bg-yellow-500/[0.035] blur-[150px] pointer-events-none z-[1]" />
-      <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 w-[600px] h-[600px] rounded-full bg-blue-500/[0.025] blur-[160px] pointer-events-none z-[1]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full bg-purple-500/[0.015] blur-[140px] pointer-events-none z-[1]" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[550px] h-[550px] rounded-full bg-yellow-500/[0.015] blur-[150px] pointer-events-none z-[1]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] rounded-full bg-purple-500/[0.01] blur-[140px] pointer-events-none z-[1]" />
 
       {/* Floating particles */}
       {particles.map((p, idx) => (

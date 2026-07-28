@@ -181,31 +181,31 @@ function CodingTerminal() {
       style={{
         boxShadow: "0 25px 60px rgba(0,0,0,.35)",
       }}
-      className="w-full h-[520px] rounded-[24px] border-[1.5px] border-[rgba(250,204,21,0.45)] hover:border-[#FACC15] hover:-translate-y-1.5 hover:shadow-[0_25px_60px_rgba(250,204,21,0.15)] transition-all duration-[0.35s] ease-[ease] bg-[#111827] backdrop-blur-xl overflow-hidden font-mono text-xs text-slate-300 flex flex-col relative z-10"
+      className="w-full h-auto py-2 sm:py-4 rounded-[20px] border-[1.5px] border-[rgba(250,204,21,0.45)] hover:border-[#FACC15] hover:-translate-y-1.5 hover:shadow-[0_25px_60px_rgba(250,204,21,0.15)] transition-all duration-[0.35s] ease-[ease] bg-[#111827] backdrop-blur-xl overflow-hidden font-mono text-[9px] xs:text-[10px] sm:text-[11.5px] text-slate-300 flex flex-col relative z-10"
     >
       {/* Window Title Bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[#0d1321] border-b border-white/[0.05] select-none flex-shrink-0">
+      <div className="flex items-center justify-between px-4 py-2 sm:py-3 bg-[#0d1321] border-b border-white/[0.05] select-none flex-shrink-0">
         <div className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-          <span className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
-          <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
+          <span className="w-2 rounded-full h-2 bg-red-500" />
+          <span className="w-2 rounded-full h-2 bg-yellow-500" />
+          <span className="w-2 rounded-full h-2 bg-green-500" />
         </div>
-        <span className="text-[10px] font-extrabold text-slate-400 uppercase tracking-[2px] font-sans pl-4">PROFILE.JS</span>
+        <span className="text-[9px] sm:text-[10px] font-extrabold text-slate-400 uppercase tracking-[2px] font-sans pl-4">PROFILE.JS</span>
         <div className="w-12" />
       </div>
  
       {/* Terminal Display */}
-      <div className="p-4 flex-grow overflow-y-auto max-h-full">
+      <div className="p-3 sm:p-4 flex-grow overflow-hidden">
         <div className="flex flex-col">
           {Array.from({ length: totalCodeLines }).map((_, idx) => {
             const line = lineArray[idx] || "";
             const isLastLine = idx === lineArray.length - 1;
             return (
-              <div key={idx} className="flex items-start gap-3.5 min-h-[1.5rem]">
-                <span className="w-4 text-right select-none text-slate-600 text-[10px] pt-0.5 font-bold">
+              <div key={idx} className="flex items-start gap-2.5 sm:gap-3.5 min-h-[1.25rem] sm:min-h-[1.5rem]">
+                <span className="w-4 text-right select-none text-slate-600 text-[9px] sm:text-[10px] pt-0.5 font-bold">
                   {idx + 1}
                 </span>
-                <span className="flex-1 pl-[76px] -indent-[76px] sm:pl-0 sm:indent-0 whitespace-pre-wrap break-words sm:whitespace-pre sm:overflow-x-auto leading-relaxed select-text font-mono text-[11px] sm:text-xs">
+                <span className="flex-1 pl-[30px] -indent-[30px] sm:pl-0 sm:indent-0 whitespace-pre-wrap break-words sm:whitespace-pre sm:overflow-x-auto leading-normal sm:leading-relaxed select-text font-mono text-[9px] xs:text-[10px] sm:text-[11px]">
                   {renderTokens(line, isLastLine)}
                 </span>
               </div>
@@ -223,14 +223,7 @@ export default function AboutSection() {
       id="about"
       className="relative pt-16 pb-16 bg-transparent border-y border-white/[0.02] selection:bg-yellow-500/20 overflow-hidden"
     >
-      {/* Decorative Dotted Grid Background */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.02] z-[0]"
-        style={{
-          backgroundImage: "radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-        }}
-      />
+
  
       {/* Decorative Blurred Accent Lights */}
       <div className="absolute top-1/4 left-1/4 -translate-x-1/2 w-[350px] h-[350px] rounded-full bg-yellow-500/[0.02] blur-[120px] pointer-events-none z-[0]" />
