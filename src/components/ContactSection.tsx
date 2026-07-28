@@ -199,7 +199,7 @@ export default function ContactSection() {
               {/* Contact Detail Cards */}
               <div className="flex flex-col gap-3">
                 {/* Location Card */}
-                <div className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5">
+                <div className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 active:scale-[0.98] active:bg-white/[0.04]">
                   <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <MapPin className="w-4.5 h-4.5" />
                   </div>
@@ -212,7 +212,7 @@ export default function ContactSection() {
                 {/* Email Card */}
                 <a
                   href="mailto:aaryanighut07@gmail.com"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer active:scale-[0.98] active:bg-white/[0.04]"
                 >
                   <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <Mail className="w-4.5 h-4.5" />
@@ -226,7 +226,7 @@ export default function ContactSection() {
                 {/* Mobile Card */}
                 <a
                   href="tel:+919172074296"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer active:scale-[0.98] active:bg-white/[0.04]"
                 >
                   <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <Phone className="w-4.5 h-4.5" />
@@ -241,7 +241,7 @@ export default function ContactSection() {
                 <a
                   href="/Aarya_Nighut_Resume.pdf"
                   download="Aarya_Nighut_Resume.pdf"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer active:scale-[0.98] active:bg-white/[0.04]"
                 >
                   <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <FileText className="w-4.5 h-4.5" />
@@ -270,7 +270,7 @@ export default function ContactSection() {
                       href={soc.href}
                       target={soc.href.startsWith("mailto:") ? undefined : "_blank"}
                       rel="noopener noreferrer"
-                      className="p-3 rounded-2xl border border-white/[0.04] bg-white/[0.01] hover:bg-[#152342] hover:border-yellow-500/30 text-slate-400 hover:text-yellow-500 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_15px_rgba(234,179,8,0.1)] flex items-center justify-center cursor-pointer group"
+                      className="p-3 rounded-2xl border border-white/[0.04] bg-white/[0.01] hover:bg-[#152342] hover:border-yellow-500/30 text-slate-400 hover:text-yellow-500 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_15px_rgba(234,179,8,0.1)] flex items-center justify-center cursor-pointer group active:scale-95"
                       title={soc.label}
                     >
                       <Icon className="w-4.5 h-4.5 transition-transform duration-300 group-hover:rotate-6" />

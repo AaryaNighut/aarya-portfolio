@@ -659,7 +659,10 @@ function ProjectCard({
   const dotColorClass = dotColors[index % dotColors.length];
 
   return (
-    <div className="group relative rounded-[24px] border border-white/[0.06] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:border-[#FACC15]/40 hover:shadow-[0_15px_40px_-10px_rgba(250,204,21,0.15),0_10px_20px_-15px_rgba(250,204,21,0.05)] hover:-translate-y-1.5 backdrop-blur-xl transition-all duration-500 ease-out flex flex-col justify-between p-5 md:p-6 w-full h-full overflow-hidden">
+    <motion.div 
+      whileTap={{ scale: 0.99 }}
+      className="group relative rounded-[24px] border border-white/[0.06] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:border-[#FACC15]/40 hover:shadow-[0_15px_40px_-10px_rgba(250,204,21,0.15),0_10px_20px_-15px_rgba(250,204,21,0.05)] hover:-translate-y-1.5 backdrop-blur-xl transition-all duration-500 ease-out flex flex-col justify-between p-5 md:p-6 w-full h-full overflow-hidden"
+    >
       {/* Hover border glow overlay */}
       <div className="absolute -inset-px rounded-[24px] bg-gradient-to-tr from-yellow-500/10 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
 
@@ -780,6 +783,6 @@ function ProjectCard({
           </span>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

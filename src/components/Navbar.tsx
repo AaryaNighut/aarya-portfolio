@@ -82,7 +82,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className={`relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl border ${
+                    className={`relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl border active:scale-95 active:translate-y-0 ${
                       isActive
                         ? "text-yellow-400 bg-white/[0.02] border-white/[0.08] shadow-[0_0_15px_rgba(255,212,0,0.03)]"
                         : "text-slate-400 border-transparent hover:text-yellow-400 hover:bg-white/[0.02] hover:border-white/[0.06] hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(250,204,21,0.05)]"
@@ -137,7 +137,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className={`px-4 py-3 text-xs font-bold tracking-wider uppercase rounded-xl transition-all duration-200 flex items-center justify-between ${
+                    className={`px-4 py-3 text-xs font-bold tracking-wider uppercase rounded-xl transition-all duration-200 flex items-center justify-between active:scale-[0.98] active:bg-white/[0.04] ${
                       isActive
                         ? "text-yellow-400 bg-white/[0.04] border-l-2 border-l-yellow-400 pl-6"
                         : "text-slate-400 hover:text-white hover:bg-white/[0.02]"
