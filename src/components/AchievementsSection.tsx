@@ -116,7 +116,7 @@ export default function AchievementsSection() {
                 }`}
               >
                 {/* Timeline point (Glowing Yellow Circle) */}
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[#1e355e] border-4 border-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.6)] -translate-x-1/2 z-20 transition-all duration-500 group-hover:scale-125 group-hover:border-yellow-400 group-hover:shadow-[0_0_18px_rgba(234,179,8,0.9)]" />
+                <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[#152342] border-4 border-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.6)] -translate-x-1/2 z-20 transition-all duration-500 group-hover:scale-125 group-hover:border-yellow-400 group-hover:shadow-[0_0_18px_rgba(234,179,8,0.9)]" />
 
                 {/* Card Container (Occupies 45% width on desktop) */}
                 <div
@@ -135,7 +135,7 @@ export default function AchievementsSection() {
                       delay: 0.05
                     }}
                     onClick={triggerConfetti}
-                    className={`relative p-6 md:p-8 rounded-3xl border border-white/[0.08] hover:border-[#FACC15] bg-[#0f1b35]/85 hover:bg-[#0f1b35] hover:shadow-[0_0_30px_rgba(234,179,8,0.12)] cursor-pointer transition-all duration-500 ease-out flex flex-col gap-4 overflow-hidden transform hover:-translate-y-1.5 ${
+                    className={`relative p-6 md:p-8 rounded-3xl border border-white/[0.08] hover:border-[#FACC15] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:shadow-[0_0_30px_rgba(234,179,8,0.12)] cursor-pointer transition-all duration-500 ease-out flex flex-col gap-4 overflow-hidden transform hover:-translate-y-1.5 ${
                       isLeft 
                         ? "hover:-translate-x-1 md:hover:translate-x-1.5" 
                         : "hover:-translate-x-1 md:hover:-translate-x-1.5"

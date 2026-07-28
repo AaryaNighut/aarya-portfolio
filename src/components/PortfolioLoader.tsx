@@ -130,7 +130,7 @@ export default function PortfolioLoader({ onComplete }: PortfolioLoaderProps) {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="relative max-w-[440px] w-[92%] p-5 md:p-6 rounded-2xl border border-[#FACC15]/20 bg-[#081229]/80 backdrop-blur-xl shadow-[0_0_50px_rgba(250,204,21,0.06),inset_0_0_20px_rgba(255,255,255,0.01)] flex flex-col"
+        className="relative max-w-[440px] w-[92%] p-5 md:p-6 rounded-2xl border border-[#FACC15]/20 bg-[#0b1329]/80 backdrop-blur-xl shadow-[0_0_50px_rgba(250,204,21,0.06),inset_0_0_20px_rgba(255,255,255,0.01)] flex flex-col"
       >
         {/* Glowing cyber corners */}
         <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#FACC15]" />
@@ -153,7 +153,7 @@ export default function PortfolioLoader({ onComplete }: PortfolioLoaderProps) {
           <div className="absolute inset-0 border border-dashed border-[#FACC15]/30 rounded-full animate-spin [animation-duration:32s]" />
           
           {/* Inner Circular Frame */}
-          <div className="w-[88%] h-[88%] rounded-full border border-[#FACC15]/25 bg-[#050a16] p-1 flex items-center justify-center relative overflow-hidden">
+          <div className="w-[88%] h-[88%] rounded-full border border-[#FACC15]/25 bg-[#050c1e] p-1 flex items-center justify-center relative overflow-hidden">
             <div className="w-full h-full rounded-full overflow-hidden relative">
               <img
                 src="/images/aarya_portrait_new.jpg"
