@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUp, Mail } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -85,6 +85,15 @@ export default function Footer() {
             className="p-2 rounded-full border border-white/[0.04] bg-white/[0.01] hover:bg-white/[0.05] hover:border-cyan-500/20 text-slate-500 hover:text-cyan-400 transition-all duration-300"
           >
             <FaGithub className="w-4.5 h-4.5" />
+          </a>
+          <a
+            href="https://wa.me/9172074296"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-full border border-white/[0.04] bg-white/[0.01] hover:bg-white/[0.05] hover:border-cyan-500/20 text-slate-500 hover:text-cyan-400 transition-all duration-300"
+            title="WhatsApp"
+          >
+            <FaWhatsapp className="w-4.5 h-4.5" />
           </a>
           <a
             href="mailto:aaryanighut07@gmail.com"

@@ -10,13 +10,13 @@ const navItems = [
   { label: "Services", href: "#services" },
   { label: "Projects", href: "#projects" },
   { label: "Achievements", href: "#achievements" },
-  { label: "Certificates", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,7 +72,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation Items */}
           <div className="hidden lg:flex items-center gap-2">
-            {navItems.map((item) => {
+            {navItems.map((item, index) => {
               const id = item.href.replace("#", "");
               const isActive = activeSection === id;
 
@@ -80,16 +80,30 @@ export default function Navbar() {
                 <a
                   key={item.label}
                   href={item.href}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl ${
                     isActive
                       ? "text-yellow-400 bg-white/[0.02] border border-white/[0.08] shadow-[0_0_15px_rgba(255,212,0,0.03)]"
-                      : "text-slate-400 hover:text-white"
+                      : "text-slate-400 hover:text-yellow-300"
                   }`}
                 >
                   <span className="relative z-10 flex items-center gap-1">
                     {item.label}
                   </span>
+                  <AnimatePresence>
+                    {hoveredIndex === index && !isActive && (
+                      <motion.span
+                        layoutId="navHoverBg"
+                        className="absolute inset-0 bg-yellow-400/[0.04] border border-yellow-400/10 rounded-xl -z-10"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                    )}
+                  </AnimatePresence>
                 </a>
               );
             })}

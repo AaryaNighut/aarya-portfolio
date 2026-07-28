@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, MapPin, Download, CheckCircle, AlertCircle, FileText, Loader2, Phone } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
 export default function ContactSection() {
@@ -136,6 +136,7 @@ export default function ContactSection() {
     { icon: FaGithub, href: "https://github.com/AaryaNighut", label: "GitHub" },
     { icon: FaLinkedin, href: "https://www.linkedin.com/in/aarya-nighut-855939339", label: "LinkedIn" },
     { icon: SiLeetcode, href: "https://leetcode.com/u/aaryanighut07/", label: "LeetCode" },
+    { icon: FaWhatsapp, href: "https://wa.me/9172074296", label: "WhatsApp" },
     { icon: Mail, href: "mailto:aaryanighut07@gmail.com", label: "Email" },
   ];
 
