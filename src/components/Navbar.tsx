@@ -60,58 +60,70 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-[9999] w-full bg-[#07111F]/75 backdrop-blur-[18px] border-b border-white/[0.05] select-none h-14 lg:h-20 flex items-center transition-all duration-300">
         <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between">
-          {/* Logo: Clean professional coding symbol */}
+          {/* Brand Name on Left */}
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, "#home")}
-            className="group flex items-center text-xl md:text-2xl font-black tracking-tight text-yellow-400 hover:text-yellow-300 transition-colors"
+            className="text-[11px] sm:text-xs font-black tracking-widest text-white hover:text-yellow-400 transition-colors uppercase"
           >
-            <span className="group-hover:scale-105 transition-transform duration-300">&lt;/&gt;</span>
+            Aarya Nighut
           </a>
 
-          {/* Desktop Navigation Items */}
-          <div className="hidden lg:flex items-center gap-2">
-            {navItems.map((item) => {
-              const id = item.href.replace("#", "");
-              const isActive = activeSection === id;
+          {/* Right items */}
+          <div className="flex items-center gap-4">
+            {/* Desktop Navigation Items */}
+            <div className="hidden lg:flex items-center gap-2">
+              {navItems.map((item) => {
+                const id = item.href.replace("#", "");
+                const isActive = activeSection === id;
 
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className={`relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl border ${
-                    isActive
-                      ? "text-yellow-400 bg-white/[0.02] border-white/[0.08] shadow-[0_0_15px_rgba(255,212,0,0.03)]"
-                      : "text-slate-400 border-transparent hover:text-yellow-400 hover:bg-white/[0.02] hover:border-white/[0.06] hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(250,204,21,0.05)]"
-                  }`}
-                >
-                  <span className="relative z-10 flex items-center gap-1">
-                    {item.label}
-                  </span>
-                </a>
-              );
-            })}
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className={`relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl border ${
+                      isActive
+                        ? "text-yellow-400 bg-white/[0.02] border-white/[0.08] shadow-[0_0_15px_rgba(255,212,0,0.03)]"
+                        : "text-slate-400 border-transparent hover:text-yellow-400 hover:bg-white/[0.02] hover:border-white/[0.06] hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(250,204,21,0.05)]"
+                    }`}
+                  >
+                    <span className="relative z-10 flex items-center gap-1">
+                      {item.label}
+                    </span>
+                  </a>
+                );
+              })}
 
-            {/* Resume Download Button */}
+              {/* Resume Download Button */}
+              <a
+                href="/Aarya_Nighut_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase text-yellow-400 border border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black hover:shadow-[0_0_20px_rgba(250,204,21,0.25)] rounded-xl transition-all duration-300 flex items-center gap-1 ml-4"
+              >
+                Resume
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            {/* Coding symbol logo on the right */}
             <a
-              href="/Aarya_Nighut_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2.5 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase text-yellow-400 border border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black hover:shadow-[0_0_20px_rgba(250,204,21,0.25)] rounded-xl transition-all duration-300 flex items-center gap-1 ml-4"
+              href="#home"
+              onClick={(e) => handleNavClick(e, "#home")}
+              className="group flex items-center text-lg md:text-xl font-black text-yellow-400 hover:text-yellow-300 transition-colors"
             >
-              Resume
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              <span className="group-hover:scale-105 transition-transform duration-300">&lt;/&gt;</span>
             </a>
-          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors"
-          >
-            {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
-          </button>
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] text-slate-300 hover:text-white hover:bg-white/[0.06] transition-colors"
+            >
+              {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+            </button>
+          </div>
         </div>
       </header>
 

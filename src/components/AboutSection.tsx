@@ -181,10 +181,10 @@ function CodingTerminal() {
       style={{
         boxShadow: "0 25px 60px rgba(0,0,0,.35)",
       }}
-      className="w-full h-auto py-2 sm:py-4 rounded-[20px] border-[1.5px] border-[rgba(250,204,21,0.45)] hover:border-[#FACC15] hover:-translate-y-1.5 hover:shadow-[0_25px_60px_rgba(250,204,21,0.15)] transition-all duration-[0.35s] ease-[ease] bg-[#111827] backdrop-blur-xl overflow-hidden font-mono text-[9px] xs:text-[10px] sm:text-[11.5px] text-slate-300 flex flex-col relative z-10"
+      className="w-full h-auto rounded-[20px] border-[1.5px] border-[rgba(250,204,21,0.45)] hover:border-[#FACC15] hover:-translate-y-1.5 hover:shadow-[0_25px_60px_rgba(250,204,21,0.15)] transition-all duration-[0.35s] ease-[ease] bg-[#111827] backdrop-blur-xl overflow-hidden font-mono text-[9px] xs:text-[10px] sm:text-[11.5px] text-slate-300 flex flex-col relative z-10"
     >
       {/* Window Title Bar */}
-      <div className="flex items-center justify-between px-4 py-2 sm:py-3 bg-[#0d1321] border-b border-white/[0.05] select-none flex-shrink-0">
+      <div className="flex items-center justify-between px-4 py-1.5 sm:py-2 bg-[#0d1321] border-b border-white/[0.05] select-none flex-shrink-0">
         <div className="flex items-center gap-1.5">
           <span className="w-2 rounded-full h-2 bg-red-500" />
           <span className="w-2 rounded-full h-2 bg-yellow-500" />
@@ -195,7 +195,7 @@ function CodingTerminal() {
       </div>
  
       {/* Terminal Display */}
-      <div className="p-3 sm:p-4 flex-grow overflow-hidden">
+      <div className="px-3 pb-3 pt-2 sm:px-4 sm:pb-4 sm:pt-3 flex-grow overflow-hidden">
         <div className="flex flex-col">
           {Array.from({ length: totalCodeLines }).map((_, idx) => {
             const line = lineArray[idx] || "";
