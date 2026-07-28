@@ -80,17 +80,14 @@ export default function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`group relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl ${
+                  className={`relative px-4 py-2 text-[10px] xl:text-[11px] font-bold tracking-widest uppercase transition-all duration-300 rounded-xl border ${
                     isActive
-                      ? "text-yellow-400 bg-white/[0.02] border border-white/[0.08] shadow-[0_0_15px_rgba(255,212,0,0.03)]"
-                      : "text-slate-400 hover:text-yellow-400"
+                      ? "text-yellow-400 bg-white/[0.02] border-white/[0.08] shadow-[0_0_15px_rgba(255,212,0,0.03)]"
+                      : "text-slate-400 border-transparent hover:text-yellow-400 hover:bg-white/[0.02] hover:border-white/[0.06] hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(250,204,21,0.05)]"
                   }`}
                 >
-                  <span className="relative z-10 flex flex-col items-center gap-1">
+                  <span className="relative z-10 flex items-center gap-1">
                     {item.label}
-                    {!isActive && (
-                      <span className="absolute -bottom-1.5 left-0 w-full h-[2px] bg-yellow-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center rounded-full" />
-                    )}
                   </span>
                 </a>
               );
