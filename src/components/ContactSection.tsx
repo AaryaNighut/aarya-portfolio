@@ -199,8 +199,8 @@ export default function ContactSection() {
               {/* Contact Detail Cards */}
               <div className="flex flex-col gap-3">
                 {/* Location Card */}
-                <div className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5">
-                  <div className="p-2.5 rounded-xl bg-[#152342] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5">
+                  <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <MapPin className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -212,9 +212,9 @@ export default function ContactSection() {
                 {/* Email Card */}
                 <a
                   href="mailto:aaryanighut07@gmail.com"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#152342] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                  <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <Mail className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -226,9 +226,9 @@ export default function ContactSection() {
                 {/* Mobile Card */}
                 <a
                   href="tel:+919172074296"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#152342] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                  <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <Phone className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -241,9 +241,9 @@ export default function ContactSection() {
                 <a
                   href="/Aarya_Nighut_Resume.pdf"
                   download="Aarya_Nighut_Resume.pdf"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.05] hover:border-yellow-500/30 bg-white/[0.02] hover:bg-white/[0.04] backdrop-blur-md hover:shadow-[0_0_15px_rgba(250,204,21,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#152342] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                  <div className="p-2.5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 group-hover:border-yellow-500/40 group-hover:scale-105 transition-all duration-300">
                     <FileText className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -283,7 +283,7 @@ export default function ContactSection() {
 
           {/* Right Column (60%): Premium Contact Form */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <div className="relative p-6 md:p-8 rounded-[24px] border border-white/[0.08] bg-gradient-to-b from-[#0b1329]/90 to-[#0b1329]/75 backdrop-blur-xl shadow-2xl overflow-hidden">
+            <div className="relative p-6 md:p-8 rounded-[24px] border border-white/[0.06] bg-[#0f172a]/30 backdrop-blur-xl shadow-2xl overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-yellow-500/[0.02] blur-xl pointer-events-none" />
 
               <form noValidate action="https://formsubmit.co/aaryanighut07@gmail.com" method="POST" onSubmit={handleSubmit} className="flex flex-col gap-5">

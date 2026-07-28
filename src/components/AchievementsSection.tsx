@@ -135,7 +135,7 @@ export default function AchievementsSection() {
                       delay: 0.05
                     }}
                     onClick={triggerConfetti}
-                    className={`relative p-6 md:p-8 rounded-3xl border border-white/[0.08] hover:border-[#FACC15] bg-[#0b1329]/85 hover:bg-[#0b1329] hover:shadow-[0_0_30px_rgba(234,179,8,0.12)] cursor-pointer transition-all duration-500 ease-out flex flex-col gap-4 overflow-hidden transform hover:-translate-y-1.5 ${
+                    className={`relative p-6 md:p-8 rounded-3xl border border-white/[0.06] bg-[#0f172a]/60 backdrop-blur-md hover:bg-[#0f172a]/80 hover:border-[#FACC15]/40 hover:shadow-[0_15px_40px_-10px_rgba(250,204,21,0.08)] cursor-pointer transition-all duration-500 ease-out flex flex-col gap-4 overflow-hidden transform hover:-translate-y-1.5 ${
                       isLeft 
                         ? "hover:-translate-x-1 md:hover:translate-x-1.5" 
                         : "hover:-translate-x-1 md:hover:-translate-x-1.5"
@@ -143,6 +143,9 @@ export default function AchievementsSection() {
                   >
                     {/* Hover border glow overlay */}
                     <div className="absolute -inset-px rounded-3xl bg-gradient-to-tr from-yellow-500/10 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
+
+                    {/* Top Horizontal Glow Line */}
+                    <div className="absolute top-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-yellow-500/0 via-yellow-500/30 to-yellow-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
 
                     {/* Badge and Date */}
                     <div className="flex items-center justify-between relative z-20">
