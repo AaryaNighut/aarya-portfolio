@@ -498,7 +498,7 @@ export default function ProjectsSection() {
               {showLeftArrow && (
                 <button
                   onClick={() => scroll("left")}
-                  className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-[#0b0b0d]/90 border border-white/[0.08] hover:border-yellow-500/30 text-white hover:bg-[#0b0b0d] hover:scale-105 hover:shadow-[0_0_15px_rgba(255, 212, 0, 0.15)] transition-all duration-300 shadow-xl cursor-pointer"
+                  className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-[#081229]/90 border border-white/[0.08] hover:border-yellow-500/30 text-white hover:bg-[#081229] hover:scale-105 hover:shadow-[0_0_15px_rgba(255, 212, 0, 0.15)] transition-all duration-300 shadow-xl cursor-pointer"
                   title="Previous Project"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -507,7 +507,7 @@ export default function ProjectsSection() {
               {showRightArrow && (
                 <button
                   onClick={() => scroll("right")}
-                  className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-[#0b0b0d]/90 border border-white/[0.08] hover:border-yellow-500/30 text-white hover:bg-[#0b0b0d] hover:scale-105 hover:shadow-[0_0_15px_rgba(255, 212, 0, 0.15)] transition-all duration-300 shadow-xl cursor-pointer"
+                  className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-30 p-3 rounded-full bg-[#081229]/90 border border-white/[0.08] hover:border-yellow-500/30 text-white hover:bg-[#081229] hover:scale-105 hover:shadow-[0_0_15px_rgba(255, 212, 0, 0.15)] transition-all duration-300 shadow-xl cursor-pointer"
                   title="Next Project"
                 >
                   <ChevronRight className="w-5 h-5" />
@@ -659,7 +659,7 @@ function ProjectCard({
   const dotColorClass = dotColors[index % dotColors.length];
 
   return (
-    <div className="group relative rounded-[24px] border border-white/[0.06] bg-[#121214]/85 hover:bg-[#121214] hover:border-[#FACC15]/40 hover:shadow-[0_15px_40px_-10px_rgba(250,204,21,0.15),0_10px_20px_-15px_rgba(250,204,21,0.05)] hover:-translate-y-1.5 backdrop-blur-xl transition-all duration-500 ease-out flex flex-col justify-between p-5 md:p-6 w-full h-full overflow-hidden">
+    <div className="group relative rounded-[24px] border border-white/[0.06] bg-[#0f1b35]/85 hover:bg-[#0f1b35] hover:border-[#FACC15]/40 hover:shadow-[0_15px_40px_-10px_rgba(250,204,21,0.15),0_10px_20px_-15px_rgba(250,204,21,0.05)] hover:-translate-y-1.5 backdrop-blur-xl transition-all duration-500 ease-out flex flex-col justify-between p-5 md:p-6 w-full h-full overflow-hidden">
       {/* Hover border glow overlay */}
       <div className="absolute -inset-px rounded-[24px] bg-gradient-to-tr from-yellow-500/10 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" />
 
@@ -686,7 +686,7 @@ function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             onMouseDown={(e) => e.stopPropagation()}
-            className="flex items-center justify-between gap-1 px-3 py-1 rounded-full border border-white/[0.08] hover:border-yellow-500/30 bg-[#1a1a1e] hover:bg-white/[0.06] text-[8px] font-bold text-slate-300 hover:text-white transition-all duration-300 uppercase tracking-widest cursor-pointer"
+            className="flex items-center justify-between gap-1 px-3 py-1 rounded-full border border-white/[0.08] hover:border-yellow-500/30 bg-[#1e355e] hover:bg-white/[0.06] text-[8px] font-bold text-slate-300 hover:text-white transition-all duration-300 uppercase tracking-widest cursor-pointer"
           >
             <span>GITHUB</span>
             <ExternalLink className="w-2.5 h-2.5 text-slate-400" />
@@ -708,7 +708,7 @@ function ProjectCard({
       </div>
 
       {/* Screenshot Carousel in the center */}
-      <div className="relative w-full h-[140px] sm:h-[160px] md:h-[180px] rounded-xl overflow-hidden bg-[#040405] border border-white/[0.06] select-none shrink-0 z-20">
+      <div className="relative w-full h-[140px] sm:h-[160px] md:h-[180px] rounded-xl overflow-hidden bg-[#050a16] border border-white/[0.06] select-none shrink-0 z-20">
         <motion.img
           key={currentIdx}
           src={images[currentIdx]}
@@ -716,10 +716,10 @@ function ProjectCard({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.15 }}
-          className="object-contain w-full h-full bg-[#1a1a1e]/75 group-hover:scale-[1.04] transition-transform duration-700 ease-out"
+          className="object-contain w-full h-full bg-[#1e355e]/75 group-hover:scale-[1.04] transition-transform duration-700 ease-out"
         />
         
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1e]/30 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1e355e]/30 via-transparent to-transparent pointer-events-none" />
 
         {/* Carousel arrows */}
         {images.length > 1 && (
