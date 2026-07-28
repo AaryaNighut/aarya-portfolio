@@ -199,8 +199,8 @@ export default function ContactSection() {
               {/* Contact Detail Cards */}
               <div className="flex flex-col gap-3">
                 {/* Location Card */}
-                <div className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#111827]/85 hover:bg-[#111827] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5">
-                  <div className="p-2.5 rounded-xl bg-[#0a1128] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#121214]/85 hover:bg-[#121214] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5">
+                  <div className="p-2.5 rounded-xl bg-[#1a1a1e] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
                     <MapPin className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -212,9 +212,9 @@ export default function ContactSection() {
                 {/* Email Card */}
                 <a
                   href="mailto:aaryanighut07@gmail.com"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#111827]/85 hover:bg-[#111827] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#121214]/85 hover:bg-[#121214] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#0a1128] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                  <div className="p-2.5 rounded-xl bg-[#1a1a1e] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
                     <Mail className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -226,9 +226,9 @@ export default function ContactSection() {
                 {/* Mobile Card */}
                 <a
                   href="tel:+919172074296"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#111827]/85 hover:bg-[#111827] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#121214]/85 hover:bg-[#121214] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#0a1128] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                  <div className="p-2.5 rounded-xl bg-[#1a1a1e] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
                     <Phone className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -241,9 +241,9 @@ export default function ContactSection() {
                 <a
                   href="/Aarya_Nighut_Resume.pdf"
                   download="Aarya_Nighut_Resume.pdf"
-                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#111827]/85 hover:bg-[#111827] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-4 group p-4 rounded-2xl border border-white/[0.08] hover:border-[#FACC15] bg-[#121214]/85 hover:bg-[#121214] hover:shadow-[0_0_20px_rgba(234,179,8,0.05)] transition-all duration-500 ease-out hover:-translate-y-0.5 cursor-pointer"
                 >
-                  <div className="p-2.5 rounded-xl bg-[#0a1128] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
+                  <div className="p-2.5 rounded-xl bg-[#1a1a1e] border border-white/[0.05] text-yellow-500 group-hover:border-yellow-500/20 group-hover:scale-105 transition-all duration-300">
                     <FileText className="w-4.5 h-4.5" />
                   </div>
                   <div className="flex flex-col gap-0.5 min-w-0">
@@ -270,7 +270,7 @@ export default function ContactSection() {
                       href={soc.href}
                       target={soc.href.startsWith("mailto:") ? undefined : "_blank"}
                       rel="noopener noreferrer"
-                      className="p-3 rounded-2xl border border-white/[0.04] bg-white/[0.01] hover:bg-[#0C1220] hover:border-yellow-500/30 text-slate-400 hover:text-yellow-500 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_15px_rgba(234,179,8,0.1)] flex items-center justify-center cursor-pointer group"
+                      className="p-3 rounded-2xl border border-white/[0.04] bg-white/[0.01] hover:bg-[#1a1a1e] hover:border-yellow-500/30 text-slate-400 hover:text-yellow-500 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_15px_rgba(234,179,8,0.1)] flex items-center justify-center cursor-pointer group"
                       title={soc.label}
                     >
                       <Icon className="w-4.5 h-4.5 transition-transform duration-300 group-hover:rotate-6" />
@@ -283,7 +283,7 @@ export default function ContactSection() {
 
           {/* Right Column (60%): Premium Contact Form */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <div className="relative p-6 md:p-8 rounded-[24px] border border-white/[0.08] bg-gradient-to-b from-[#111827]/90 to-[#111827]/75 backdrop-blur-xl shadow-2xl overflow-hidden">
+            <div className="relative p-6 md:p-8 rounded-[24px] border border-white/[0.08] bg-gradient-to-b from-[#121214]/90 to-[#121214]/75 backdrop-blur-xl shadow-2xl overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-yellow-500/[0.02] blur-xl pointer-events-none" />
 
               <form noValidate action="https://formsubmit.co/aaryanighut07@gmail.com" method="POST" onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -306,7 +306,7 @@ export default function ContactSection() {
                       name="name"
                       value={formState.name}
                       onChange={handleInputChange}
-                      className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#0a1128] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 placeholder:text-slate-600"
+                      className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#1a1a1e] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 placeholder:text-slate-600"
                       placeholder="e.g. John Doe"
                     />
                     {errors.name && (
@@ -328,7 +328,7 @@ export default function ContactSection() {
                       name="email"
                       value={formState.email}
                       onChange={handleInputChange}
-                      className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#0a1128] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 placeholder:text-slate-600"
+                      className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#1a1a1e] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 placeholder:text-slate-600"
                       placeholder="e.g. john@example.com"
                     />
                     {errors.email && (
@@ -351,7 +351,7 @@ export default function ContactSection() {
                     name="subject"
                     value={formState.subject}
                     onChange={handleInputChange}
-                    className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#0a1128] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 placeholder:text-slate-600"
+                    className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#1a1a1e] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 placeholder:text-slate-600"
                     placeholder="e.g. Project Collaboration"
                   />
                   {errors.subject && (
@@ -373,7 +373,7 @@ export default function ContactSection() {
                     name="message"
                     value={formState.message}
                     onChange={handleInputChange}
-                    className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#0a1128] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 resize-none placeholder:text-slate-600"
+                    className="px-4 py-2.5 rounded-xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] focus:bg-[#1a1a1e] text-xs text-white focus:outline-none focus:border-yellow-500/40 focus:ring-1 focus:ring-yellow-500/20 transition-all duration-300 resize-none placeholder:text-slate-600"
                     placeholder="Type your message details here..."
                   />
                   {errors.message && (

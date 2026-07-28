@@ -35,7 +35,7 @@ export default function CursorSpotlight() {
         height: 600,
       }}
     >
-      <div className="w-full h-full rounded-full bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.012)_0%,rgba(56,189,248,0.012)_50%,transparent_100%)] blur-[80px]" />
+      <div className="w-full h-full rounded-full bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.015)_0%,rgba(168,85,247,0.008)_60%,transparent_100%)] blur-[80px]" />
     </motion.div>
   );
 }

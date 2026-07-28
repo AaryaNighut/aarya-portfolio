@@ -177,7 +177,7 @@ export default function SkillsSection() {
                   stiffness: 150,
                   damping: 18,
                 }}
-                className="group relative p-6 rounded-2xl border border-white/[0.08] bg-[#111827]/80 hover:bg-[#111827] hover:border-[#FACC15] transition-all duration-300 ease-out cursor-default flex flex-col justify-between w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] flex-grow-0 flex-shrink-0 min-h-[260px]"
+                className="group relative p-6 rounded-2xl border border-white/[0.08] bg-[#121214]/80 hover:bg-[#121214] hover:border-[#FACC15] transition-all duration-300 ease-out cursor-default flex flex-col justify-between w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] flex-grow-0 flex-shrink-0 min-h-[260px]"
               >
                 {/* Glow Border Overlay */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-yellow-500/5 via-transparent to-yellow-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
@@ -202,7 +202,7 @@ export default function SkillsSection() {
                           key={skill}
                           variants={badgeVariants}
                           whileHover={{ scale: 1.03, y: -1 }}
-                          className="inline-flex items-center px-3 py-1 rounded-lg bg-[#0a1128] border border-white/[0.05] hover:border-yellow-400/30 hover:text-white text-[11.5px] font-semibold text-slate-400 hover:shadow-[0_0_10px_rgba(250,204,21,0.1)] transition-all duration-200 cursor-default select-none"
+                          className="inline-flex items-center px-3 py-1 rounded-lg bg-[#1a1a1e] border border-white/[0.05] hover:border-yellow-400/30 hover:text-white text-[11.5px] font-semibold text-slate-400 hover:shadow-[0_0_10px_rgba(250,204,21,0.1)] transition-all duration-200 cursor-default select-none"
                         >
                           {skill}
                         </motion.span>

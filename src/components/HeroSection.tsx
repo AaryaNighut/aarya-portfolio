@@ -322,7 +322,7 @@ export default function HeroSection() {
             ].map((tech) => (
               <div
                 key={tech.name}
-                className={`flex flex-col items-center justify-center w-[72px] h-[82px] rounded-xl border border-white/[0.08] bg-[#0C1220]/75 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 group flex-shrink-0 ${tech.hoverGlow}`}
+                className={`flex flex-col items-center justify-center w-[72px] h-[82px] rounded-xl border border-white/[0.08] bg-[#0b0b0d]/75 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 group flex-shrink-0 ${tech.hoverGlow}`}
               >
                 <tech.Icon className={`w-7 h-7 ${tech.color} group-hover:scale-112 group-hover:rotate-[3deg] transition-all duration-300`} />
                 <span className="text-[8.5px] font-bold text-slate-400 tracking-tight mt-1.5 transition-colors duration-300 text-center px-0.5 group-hover:text-white">
@@ -360,7 +360,7 @@ export default function HeroSection() {
           </div>
 
           {/* Achievements | Projects | Certificates | CGPA Cards */}
-          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0C1220]/40 hover:bg-[#0C1220]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-2 md:grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
+          <div className="max-w-xl w-full py-4.5 px-6 rounded-2xl border border-white/[0.05] bg-[#0b0b0d]/40 hover:bg-[#0b0b0d]/60 hover:border-yellow-500/20 backdrop-blur-md shadow-xl transition-all duration-300 grid grid-cols-2 md:grid-cols-4 gap-4 mb-[22px] hover:shadow-[0_0_35px_rgba(250,204,21,0.03)]">
             {stats.map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center text-center gap-1 border-white/[0.04] md:border-r md:last:border-r-0 last:pr-0 pr-2 md:pr-2">
                 <div className="flex items-center justify-center gap-1.5">
